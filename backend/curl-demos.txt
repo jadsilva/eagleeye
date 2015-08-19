@@ -1,0 +1,16 @@
+# Create
+curl -i -H "Content-Type: application/json" -d '{"address":"rua 1", "description":"descrição", "userid":"eu"}' http://localhost:3000/record
+curl -i -H "Content-Type: application/json" -d '{"address":"rua 2", "description":"descrição 2", "userid":"você"}' http://localhost:3000/record
+# List
+curl -i http://localhost:3000/record
+# Read
+curl -i http://localhost:3000/record/0
+# Update
+curl -i -X PUT -H "Content-Type: application/json" -d '{"address":"rua 3", "description":"descrição 2", "userid":"fulano"}' http://localhost:3000/record/1
+# Delete
+curl -i -X DELETE http://localhost:3000/record/1
+
+
+
+# PROPFIND
+curl -i -X PROPFIND http://localhost:3000/
