@@ -1,15 +1,12 @@
 var express = require('express');
 var router = express.Router();
 var dam = require('../dam/record');
-//var debug = require('debug')('express:router:layer');
 
 // CREATE
-// TODO retornar o _id
 router.post('/', function(req, res) {
   var newRecord = req.body;
   dam.create(newRecord);
-  res.status(200);
-  res.end();
+  res.json(newRecord._id);
 });
 
 // READ

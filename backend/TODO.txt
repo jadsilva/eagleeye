@@ -1,0 +1,2 @@
+- bulk operation: create, update, delete
+- query by criteria

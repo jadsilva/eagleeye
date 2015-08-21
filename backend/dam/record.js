@@ -1,4 +1,5 @@
-var db = require('json_file_system');
+//var db = require('json_file_system'); //BUG - https://github.com/Jalalhejazi/jsonfs/pull/3
+var db = require('/Work/ntiq/git/jsonfs/lib/jsonfs.js');
 var debug = require('debug')('dam/record');
 
 connect = function () {
