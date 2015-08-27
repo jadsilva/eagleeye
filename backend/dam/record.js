@@ -6,10 +6,13 @@ connect = function () {
   return db.connect('/tmp', ['record']);
 }
 
-exports.create = function (record) {
+exports.create = function (records) {
   db = connect();
-  db.record.save(record);
-  debug('new record: %s', JSON.stringify(record));
+  var savedRecords = db.record.save(records);
+  debug('new records: %s', JSON.stringify(records));
+  return savedRecords.map(function (record) {
+    return record._id;
+  });
 };
 
 exports.read = function (id) {

@@ -4,9 +4,9 @@ var dam = require('../dam/record');
 
 // CREATE
 router.post('/', function(req, res) {
-  var newRecord = req.body;
-  dam.create(newRecord);
-  res.json(newRecord._id);
+  var newRecords = req.body;
+  var savedRecords = dam.create(newRecords);
+  res.json(savedRecords);
 });
 
 // READ
